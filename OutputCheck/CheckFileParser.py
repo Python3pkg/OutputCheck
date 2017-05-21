@@ -38,7 +38,7 @@ class CheckFileParser:
 
         # Try to find Directives dynamically
         from . import Directives
-        for (name,object) in Directives.__dict__.items():
+        for (name,object) in list(Directives.__dict__.items()):
             if not inspect.isclass(object):
                 continue
 

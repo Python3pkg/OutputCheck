@@ -13,7 +13,7 @@ class FileChecker(object):
         lines = fileObject.readlines()
 
         # Filter out line ending characters
-        lines = list(map( lambda line: line.strip('\r\n'), lines))
+        lines = list([line.strip('\r\n') for line in lines])
         self.inputLines = lines
 
         lineNum=0 # Starts from 0
